@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Геометрия сечения
+		</title>
+	</head>
+	<body>
+
+		<div>
+			<p> Данный раздел создан для изучения сечений </p>
+			<p> Предлагается выполнить типовое задание для обучения, либо для закрепления знаний. </p>
+			<p> Необходимо выполнить сечение куба через точки KLM. </p>
+		</div>
+		
+		<div id="question1">
+			<div>
+			
+				<h2>Исходный куб</h2>
+				<img src="assets/pictures/cube1.png" alt="Trulli" width="500" height="333">
+
+				<p> Задание 1. Закончите фразу: </p>
+				<p> Для построения сечения в первую очередь необходимо соединить две точки, лежащие на <input type="text" name="question1TextInput"> <input type="submit" value="ok"></p>
+			
+			</div>
+			
+			<div id="question1Help">
+				<p> Подсказка </p>
+				<p> Первым делом при построении сечения необходимо проверить, есть ли точки на одной грани. </p>
+			</div>
+			
+			<div id="question1Success">
+				<p> Правильно! </p>
+			</div>
+		
+		</div>
+		
+		<div id="question2">
+			
+			<div>
+			
+				<p> Задание 2. Какие точки лежат на одной грани? </p>
+				
+				<div>
+				  <input type="radio" id="2-ML" name="question2RadioGroup">
+				  <label for="2-ML">M и L</label>
+				</div>
+
+				<div>
+				  <input type="radio" id="2-MK" name="question2RadioGroup">
+				  <label for="2-MK">M и K</label>
+				</div>
+
+				<div>
+				  <input type="radio" id="2-LK" name="question2RadioGroup">
+				  <label for="2-LK">L и K</label>
+				</div>
+
+			</div>
+			
+			<div id="question2Help">
+				<p> Подумай! </p>
+			</div>
+			
+			<div id="question2Success">
+				<p> Правильно! </p>
+			</div>
+		
+		</div>
+		
+		<div id="question3">
+			
+			<div>
+						
+				<label for="edge-select">Задание 3. Продливаем прямую LK до пересечения с ребром:</label>
+
+				<select id="edge-select">
+					<option value="">Выберите варинат</option>
+					<option value="ab">AB</option>
+					<option value="aib">A'A</option>
+					<option value="bc">BC</option>
+					<option value="c1c">C1C</option>
+				</select>
+
+			</div>
+			
+			<div id="question3Help">
+				<p> Подумай! </p>
+			</div>
+			
+			<div id="question3Success">
+				<p> Правильно! </p>
+			</div>
+		
+		</div>
+
+		<div id="question4.1">
+
+			<div>
+
+				<label>Задание 4 (3. -AB-). Соединим полученные точки:</label>
+
+				<select id="q4.1-edge-select-1">
+					<option value="">Выберите варинат:</option>
+					<option value="ab">A</option>
+					<option value="aib">B</option>
+					<option value="bc">A1</option>
+					<option value="c1c">B1</option>
+					<option value="ab">M</option>
+					<option value="aib">L</option>
+					<option value="bc">K</option>
+					<option value="c1c">X1</option>
+				</select>
+
+				и
+
+				<select id="q4.1-edge-select-2">
+					<option value="">Выберите варинат:</option>
+					<option value="ab">A</option>
+					<option value="aib">B</option>
+					<option value="bc">A1</option>
+					<option value="c1c">B1</option>
+					<option value="ab">M</option>
+					<option value="aib">L</option>
+					<option value="bc">K</option>
+					<option value="c1c">X1</option>
+				</select>
+
+			</div>
+
+			<div id="question4.1-Help">
+				<p> Нам нужны точки, лежащие в одной плоскости!  </p>
+			</div>
+
+			<div id="question4.1-Success">
+				<p> Правильно! </p>
+			</div>
+
+		</div>
+
+
+		<div id="question4.2">
+
+			<div>
+
+				<label>Задание 4 (3. -BC-). Соединим полученные точки:</label>
+
+				<select id="q4.2-edge-select-1">
+					<option value="">Выберите варинат:</option>
+					<option value="ab">B</option>
+					<option value="aib">C</option>
+					<option value="bc">C1</option>
+					<option value="c1c">B1</option>
+					<option value="ab">M</option>
+					<option value="aib">L</option>
+					<option value="bc">K</option>
+					<option value="c1c">X2</option>
+				</select>
+
+				и
+
+				<select id="q4.2-edge-select-2">
+					<option value="">Выберите варинат:</option>
+					<option value="ab">B</option>
+					<option value="aib">C</option>
+					<option value="bc">C1</option>
+					<option value="c1c">B1</option>
+					<option value="ab">M</option>
+					<option value="aib">L</option>
+					<option value="bc">K</option>
+					<option value="c1c">X2</option>
+				</select>
+
+			</div>
+
+			<div id="question4.2-Help">
+				<p> Нам нужны точки, лежащие в одной плоскости!  </p>
+			</div>
+
+			<div id="question4.2-Success">
+				<p> Правильно! </p>
+			</div>
+
+		</div>
+
+		<div id="question5.1">
+
+			<div>
+
+				<div>
+
+					<p> Задание 5 (3. -AB-). Соединяем полученные точки, лежащие на одной грани : </p>
+
+					<div>
+						<input type="radio" id="5.1-NK" name="question5.1RadioGroup">
+						<label for="5.1-NK">N и K</label>
+					</div>
+
+					<div>
+						<input type="radio" id="5.1-NL" name="question5.1RadioGroup">
+						<label for="5.1-NL">N и L</label>
+					</div>
+
+					<div>
+						<input type="radio" id="5.1-X1L" name="question5.1RadioGroup">
+						<label for="5.1-X1L">X1 и L</label>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="question5.1-Help">
+				<p> Ой! </p>
+			</div>
+
+			<div id="question5.1-Success">
+				<p> Правильно! </p>
+			</div>
+
+		</div>
+
+		<div id="question5.2">
+
+			<div>
+
+				<label>Задание 5 (3. -BC-). Соединим полученные точки:</label>
+
+
+			</div>
+
+			<div id="question5.2-Help">
+				<p> Ой!  </p>
+			</div>
+
+			<div id="question5.2-Success">
+				<p> Правильно! </p>
+			</div>
+
+		</div>
+	</body>
+</html>
