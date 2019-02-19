@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
-	<head>
-		<link rel="stylesheet" type="text/css" href="assets/styles.css" />
+	<head><!-- Служебная информация, стили, подключение функций -->
+		<link rel="stylesheet" type="text/css" href="assets/styles.css" /><!-- Подключение стилей (внешний вид) страницы -->
+		<script type="text/javascript" src="assets/scripts/jquery-3.3.1.js"></script><!-- Подключение библиотеки jquery с множеством функций из коробки -->
+		<script type="text/javascript" src="assets/scripts/scripts.js"></script><!-- Подключение файла с логикой страницы -->
 		<title>
 			Cечения
 		</title>
 	</head>
 	<body>
 
-		<div>
-			<h2> Геометрия. Сечения. </h2>
-			<p> Данный раздел создан для изучения сечений. </p>
+	<!-- Так задается комментарий -->
+
+		<div><!-- div - Блок, который объединяет в себе несколько компонентов (текст, картинки, контрол ввода или выбора текста) в группу-->
+			<h2> Геометрия. Сечения. </h2> <!-- h2 - выделение абзаца с крупным текстом -->
+			<p> Данный раздел создан для изучения сечений. </p><!-- p - выделение абзаца с обычным текстом -->
 			<p> Предлагается выполнить типовое задание для обучения, либо для закрепления знаний. </p>
 			<p> Необходимо выполнить сечение куба через точки KLM. </p>
 		</div>
-		
-		<div id="question1">
+
+		<div id="question1"><!-- по id можно найти компонент на странице -->
 			<div>
 			
 				<h2>Исходный куб</h2>
-				<img src="assets/pictures/cube1.png" width="400" height="360">
+				<img src="assets/pictures/cube1.png" width="400" height="360"> <!-- img - ссылка на картинку -->
 
 				<h2>Задание 1.</h2>
 				<p>
 					Для построения сечения в первую очередь необходимо соединить две точки, лежащие на
-					<input type="text" name="question1TextInput" placeholder="Закончите фразу">
-					<input type="submit" value="ОК">
+					<input type="text" name="question1TextInput" placeholder="Закончите фразу"> <!-- input - какой-то контрол. type="text" - ввод текста  -->
+					<input id="q1-btn" type="submit" value="ОК"> <!-- type="submit" - кнопка -->
 				</p>
 			
 			</div>
@@ -48,22 +52,24 @@
 				<p>Какие точки лежат на одной грани?</p>
 
 				<p>
-					<div>
-						<input type="radio" id="2-ML" name="question2RadioGroup">
-						<label for="2-ML">M и L</label>
+					<div id="q2radio">
+						<div>
+							<input type="radio" id="2-ML" name="question2RadioGroup" value="M и L">
+							<label for="2-ML">M и L</label>
+						</div>
+
+						<div>
+							<input type="radio" id="2-MK" name="question2RadioGroup" value="M и K">
+							<label for="2-MK">M и K</label>
+						</div>
+
+						<div>
+							<input type="radio" id="2-LK" name="question2RadioGroup" value="L и K">
+							<label for="2-LK">L и K</label>
+						</div>
 					</div>
 
-					<div>
-						<input type="radio" id="2-MK" name="question2RadioGroup">
-						<label for="2-MK">M и K</label>
-					</div>
-
-					<div>
-						<input type="radio" id="2-LK" name="question2RadioGroup">
-						<label for="2-LK">L и K</label>
-					</div>
-
-					<input type="submit" value="ОК">
+					<input id="q2-btn" type="submit" value="ОК">
 
 				</p>
 
@@ -88,7 +94,7 @@
 				<p>
 					Продлеваем прямую LK до пересечения с ребром:
 
-					<select id="3-edge-select">
+					<select id="3-edge-select"> <!-- select - контрол с выпадающим списком -->
 						<option value="">Выберите варинат</option>
 						<option value="ab">AB</option>
 						<option value="aib">A'A</option>
@@ -96,7 +102,7 @@
 						<option value="c1c">C1C</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q3-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
@@ -105,9 +111,14 @@
 				<p> Подумай! </p>
 			</div>
 			
-			<div class="success" id="question3-Success">
+			<div class="success" id="question3_1-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube3.1.png" width="500" height="360">
+			</div>
+
+			<div class="success" id="question3_2-Success">
+				<p> Правильно! </p>
+				<img src="assets/pictures/cube3.2.png" width="500" height="360">
 			</div>
 		
 		</div>
@@ -146,7 +157,7 @@
 						<option value="c1c">X1</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q4.1-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
@@ -186,7 +197,7 @@
 							<label for="5.1-X1L">X1 и L</label>
 						</div>
 
-						<input type="submit" value="ОК">
+						<input id="q5.1-btn" type="submit" value="ОК">
 					</p>
 				</div>
 
@@ -219,7 +230,7 @@
 						<option value="c1c">C1C</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q6.1-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
@@ -268,7 +279,7 @@
 						<option value="c1c">X2</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q7.1-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
@@ -305,7 +316,7 @@
 						<label for="8.1-PK">P и K</label>
 					</div>
 
-					<input type="submit" value="ОК">
+					<input id="q8.1-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
@@ -346,7 +357,7 @@
 						<option value="c1c">X1</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q4.2-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
@@ -386,7 +397,7 @@
 							<label for="5.2-X1L">X1 и L</label>
 						</div>
 
-						<input type="submit" value="ОК">
+						<input id="q5.2-btn" type="submit" value="ОК">
 					</p>
 				</div>
 
@@ -419,7 +430,7 @@
 						<option value="c1c">C1C</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q6.2-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
@@ -468,7 +479,7 @@
 						<option value="c1c">X2</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q7.2-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
@@ -505,7 +516,7 @@
 						<label for="8.2-PK">P и K</label>
 					</div>
 
-					<input type="submit" value="ОК">
+					<input id="q8.2-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
