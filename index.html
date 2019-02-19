@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
-	<head>
-		<link rel="stylesheet" type="text/css" href="assets/styles.css" />
+	<head><!-- Служебная информация, стили, подключение функций -->
+		<link rel="stylesheet" type="text/css" href="assets/styles.css" /><!-- Подключение стилей (внешний вид) страницы -->
+		<script type="text/javascript" src="assets/scripts/jquery-3.3.1.js"></script><!-- Подключение библиотеки jquery с множеством функций из коробки -->
+		<script type="text/javascript" src="assets/scripts/scripts.js"></script><!-- Подключение файла с логикой страницы -->
 		<title>
 			Cечения
 		</title>
 	</head>
 	<body>
 
-		<div>
-			<h2> Геометрия. Сечения. </h2>
-			<p> Данный раздел создан для изучения сечений. </p>
+	<!-- Так задается комментарий -->
+
+		<div><!-- div - Блок, который объединяет в себе несколько компонентов (текст, картинки, контрол ввода или выбора текста) в группу-->
+			<h2> Геометрия. Сечения. </h2> <!-- h2 - выделение абзаца с крупным текстом -->
+			<p> Данный раздел создан для изучения сечений. </p><!-- p - выделение абзаца с обычным текстом -->
 			<p> Предлагается выполнить типовое задание для обучения, либо для закрепления знаний. </p>
 			<p> Необходимо выполнить сечение куба через точки KLM. </p>
 		</div>
-		
-		<div id="question1">
+
+		<div id="question1"><!-- по id можно найти компонент на странице -->
 			<div>
 			
 				<h2>Исходный куб</h2>
-				<img src="assets/pictures/cube1.png" width="400" height="360">
+				<img src="assets/pictures/cube1.png" width="400" height="360"> <!-- img - ссылка на картинку -->
 
 				<h2>Задание 1.</h2>
 				<p>
 					Для построения сечения в первую очередь необходимо соединить две точки, лежащие на
-					<input type="text" name="question1TextInput" placeholder="Закончите фразу">
-					<input type="submit" value="ОК">
+					<input type="text" name="question1TextInput" placeholder="Закончите фразу"> <!-- input - какой-то контрол. type="text" - ввод текста  -->
+					<input id="q1-btn" type="submit" value="ОК"> <!-- type="submit" - кнопка -->
 				</p>
 			
 			</div>
@@ -48,22 +52,24 @@
 				<p>Какие точки лежат на одной грани?</p>
 
 				<p>
-					<div>
-						<input type="radio" id="2-ML" name="question2RadioGroup">
-						<label for="2-ML">M и L</label>
+					<div id="q2radio">
+						<div>
+							<input type="radio" id="2-ML" name="question2RadioGroup" value="M и L">
+							<label for="2-ML">M и L</label>
+						</div>
+
+						<div>
+							<input type="radio" id="2-MK" name="question2RadioGroup" value="M и K">
+							<label for="2-MK">M и K</label>
+						</div>
+
+						<div>
+							<input type="radio" id="2-LK" name="question2RadioGroup" value="L и K">
+							<label for="2-LK">L и K</label>
+						</div>
 					</div>
 
-					<div>
-						<input type="radio" id="2-MK" name="question2RadioGroup">
-						<label for="2-MK">M и K</label>
-					</div>
-
-					<div>
-						<input type="radio" id="2-LK" name="question2RadioGroup">
-						<label for="2-LK">L и K</label>
-					</div>
-
-					<input type="submit" value="ОК">
+					<input id="q2-btn" type="submit" value="ОК">
 
 				</p>
 
@@ -88,7 +94,7 @@
 				<p>
 					Продлеваем прямую LK до пересечения с ребром:
 
-					<select id="3-edge-select">
+					<select id="3-edge-select"> <!-- select - контрол с выпадающим списком -->
 						<option value="">Выберите варинат</option>
 						<option value="ab">AB</option>
 						<option value="aib">A'A</option>
@@ -96,7 +102,7 @@
 						<option value="c1c">C1C</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q3-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
@@ -105,113 +111,115 @@
 				<p> Подумай! </p>
 			</div>
 			
-			<div class="success" id="question3-Success">
+			<div class="success" id="question3_1-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube3.1.png" width="500" height="360">
+			</div>
+
+			<div class="success" id="question3_2-Success">
+				<p> Правильно! </p>
+				<img src="assets/pictures/cube3.2.png" width="500" height="360">
 			</div>
 		
 		</div>
 
-		<div id="question4.1">
+		<div id="question4_1">
 
 			<div>
 
-				<h2>Задание 4 (3: -AB-).</h2>
+				<h2>Задание 4 (В 3-м задании выбран ответ AB)</h2>
 				<p>Соединим полученные точки:</p>
 
 				<p>
-					<select id="q4.1-edge-select-1">
+					<select id="q4_1-edge-select-1">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">A</option>
-						<option value="aib">B</option>
-						<option value="bc">A1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X1</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+						<option value="a1">A1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x1">X1</option>
 					</select>
 
 					 и
 
-					<select id="q4.1-edge-select-2">
+					<select id="q4_1-edge-select-2">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">A</option>
-						<option value="aib">B</option>
-						<option value="bc">A1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X1</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+						<option value="a1">A1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x1">X1</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q4_1-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
-			<div class="failed" id="question4.1-Help">
+			<div class="failed" id="question4_1-Help">
 				<p> Нам нужны точки, лежащие в одной плоскости!  </p>
 			</div>
 
-			<div class="success" id="question4.1-Success">
+			<div class="success" id="question4_1-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube4.1.png" width="500" height="360">
 			</div>
 
 		</div>
 
-		<div id="question5.1">
-
+		<div id="question5_1">
 			<div>
-
 				<p>
-
-					<h2> Задание 5 (3: -AB-).</h2>
+					<h2> Задание 5 (В 3-м задании выбран ответ AB)</h2>
 					<p>Соединяем полученные точки, лежащие на одной грани : </p>
 
 					<p>
 						<div>
-							<input type="radio" id="5.1-NK" name="question5.1RadioGroup">
-							<label for="5.1-NK">N и K</label>
+							<input type="radio" id="5_1-NK" name="question5_1RadioGroup" value="N и K">
+							<label for="5_1-NK">N и K</label>
 						</div>
 
 						<div>
-							<input type="radio" id="5.1-NL" name="question5.1RadioGroup">
-							<label for="5.1-NL">N и L</label>
+							<input type="radio" id="5_1-NL" name="question5_1RadioGroup" value="N и L">
+							<label for="5_1-NL">N и L</label>
 						</div>
 
 						<div>
-							<input type="radio" id="5.1-X1L" name="question5.1RadioGroup">
-							<label for="5.1-X1L">X1 и L</label>
+							<input type="radio" id="5_1-X1L" name="question5_1RadioGroup" value="M и L">
+							<label for="5_1-X1L">M и L</label>
 						</div>
 
-						<input type="submit" value="ОК">
+						<input id="q5_1-btn" type="submit" value="ОК">
 					</p>
 				</div>
 
 			</div>
 
-			<div class="failed" id="question5.1-Help">
+			<div class="failed" id="question5_1-Help">
 				<p> Ой! </p>
 			</div>
 
-			<div class="success" id="question5.1-Success">
+			<div class="success" id="question5_1-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube5.1.png" width="500" height="360">
 			</div>
 
 		</div>
 
-		<div id="question6.1">
+		<div id="question6_1">
 
 			<div>
 
-				<h2>Задание 6 (3: -AB-).</h2>
+				<h2>Задание 6 (В 3-м задании выбран ответ AB)</h2>
 				<p>
 					Продлеваем прямую LK до пересечения с ребром:
 
-					<select id="6.1-edge-select">
+					<select id="q6_1-edge-select">
 						<option value="">Выберите варинат</option>
 						<option value="ab">AB</option>
 						<option value="aib">A'A</option>
@@ -219,199 +227,199 @@
 						<option value="c1c">C1C</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q6_1-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
 
-			<div class="failed" id="question6.1-Help">
+			<div class="failed" id="question6_1-Help">
 				<p> Подумай! </p>
 			</div>
 
-			<div class="success" id="question6.1-Success">
+			<div class="success" id="question6_1-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube6.1.png" width="500" height="360">
 			</div>
 
 		</div>
 
-		<div id="question7.1">
+		<div id="question7_1">
 
 			<div>
-				<h2> Задание 7 (3: -AB-).</h2>
+				<h2> Задание 7 (В 3-м задании выбран ответ AB)</h2>
 				<p>
 					Соединим полученные точки:
 
-					<select id="q7.1-edge-select-1">
+					<select id="q7_1-edge-select-1">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">B</option>
-						<option value="aib">C</option>
-						<option value="bc">C1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X2</option>
+						<option value=b">B</option>
+						<option value="c">C</option>
+						<option value="c1">C1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x2">X2</option>
 					</select>
 
 					 и
 
-					<select id="q7.1-edge-select-2">
+					<select id="q7_1-edge-select-2">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">B</option>
-						<option value="aib">C</option>
-						<option value="bc">C1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X2</option>
+						<option value=b">B</option>
+						<option value="c">C</option>
+						<option value="c1">C1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x2">X2</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q7_1-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
-			<div class="failed" id="question7.1-Help">
+			<div class="failed" id="question7_1-Help">
 				<p> Нам нужны точки, лежащие в одной плоскости! </p>
 			</div>
 
-			<div class="success" id="question7.1-Success">
+			<div class="success" id="question7_1-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube7.1.png" width="500" height="360">
 			</div>
 
 		</div>
 
-		<div id="question8.1">
+		<div id="question8_1">
 
 			<div>
-				<h2>Задание 8 (3. -AB-).</h2>
+				<h2>Задание 8 (В 3-м задании выбран ответ AB)</h2>
 				<p>Соединяем полученные точки, лежащие на одной грани:</p>
 
 				<p>
 					<div>
-						<input type="radio" id="8.1-PD" name="question8.1RadioGroup">
-						<label for="8.1-PD">P и D</label>
+						<input type="radio" id="8_1-PD" name="question8_1RadioGroup" value="P и D">
+						<label for="8_1-PD">P и D</label>
 					</div>
 
 					<div>
-						<input type="radio" id="8.1-CX2" name="question8.1RadioGroup">
-						<label for="8.1-CX2">С и X2</label>
+						<input type="radio" id="8_1-CX2" name="question8_1RadioGroup" value="С и X2">
+						<label for="8_1-CX2">С и X2</label>
 					</div>
 
 					<div>
-						<input type="radio" id="8.1-PK" name="question8.1RadioGroup">
-						<label for="8.1-PK">P и K</label>
+						<input type="radio" id="8_1-PK" name="question8_1RadioGroup" value="P и K">
+						<label for="8_1-PK">P и K</label>
 					</div>
 
-					<input type="submit" value="ОК">
+					<input id="q8_1-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
 
 		</div>
 
-		<div id="question4.2">
+		<div id="question4_2">
 
 			<div>
 
-				<h2>Задание 4 (3. -BC-).</h2>
+				<h2>Задание 4 (В 3-м задании выбран ответ BC)</h2>
 				<p>
 					Соединим полученные точки:
 
-					<select id="q4.2-edge-select-1">
+					<select id="q4_2-edge-select-1">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">A</option>
-						<option value="aib">B</option>
-						<option value="bc">A1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X1</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+						<option value="a1">A1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x2">X2</option>
 					</select>
 
 					 и
 
-					<select id="q4.2-edge-select-2">
+					<select id="q4_2-edge-select-2">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">A</option>
-						<option value="aib">B</option>
-						<option value="bc">A1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X1</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+						<option value="a1">A1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x2">X2</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q4_2-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
-			<div class="failed" id="question4.2-Help">
+			<div class="failed" id="question4_2-Help">
 				<p> Нам нужны точки, лежащие в одной плоскости!  </p>
 			</div>
 
-			<div class="success" id="question4.2-Success">
+			<div class="success" id="question4_2-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube4.2.png" width="400" height="360">
 			</div>
 
 		</div>
 
-		<div id="question5.2">
+		<div id="question5_2">
 
 			<div>
 
 				<div>
 
-					<h2> Задание 5 (3. -BC-). </h2>
+					<h2> Задание 5 (В 3-м задании выбран ответ BC) </h2>
 					<p> Соединяем полученные точки, лежащие на одной грани : </p>
 
 					<p>
 						<div>
-							<input type="radio" id="5.2-NK" name="question5.2RadioGroup">
-							<label for="5.2-NK">N и K</label>
+							<input type="radio" id="5_2-NK" name="question5_2RadioGroup" value="K и M">
+							<label for="5_2-NK">K и M</label>
 						</div>
 
 						<div>
-							<input type="radio" id="5.2-NL" name="question5.2RadioGroup">
-							<label for="5.2-NL">N и L</label>
+							<input type="radio" id="5_2-NL" name="question5_2RadioGroup" value="K и P">
+							<label for="5_2-NL">K и P</label>
 						</div>
 
 						<div>
-							<input type="radio" id="5.2-X1L" name="question5.2RadioGroup">
-							<label for="5.2-X1L">X1 и L</label>
+							<input type="radio" id="5_2-X1L" name="question5_2RadioGroup" value="L и M">
+							<label for="5_2-X1L">L и M</label>
 						</div>
 
-						<input type="submit" value="ОК">
+						<input id="q5_2-btn" type="submit" value="ОК">
 					</p>
 				</div>
 
 			</div>
 
-			<div class="failed" id="question5.2-Help">
+			<div class="failed" id="question5_2-Help">
 				<p> Ой! </p>
 			</div>
 
-			<div class="success" id="question5.2-Success">
+			<div class="success" id="question5_2-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube5.2.png" width="420" height="360">
 			</div>
 
 		</div>
 
-		<div id="question6.2">
+		<div id="question6_2">
 
 			<div>
 
-				<h2>Задание 6 (3. -BC-).</h2>
+				<h2>Задание 6 (В 3-м задании выбран ответ BC)</h2>
 				<p>
 					Продлеваем прямую LK до пересечения с ребром:
 
-					<select id="6.2-edge-select">
+					<select id="q6_2-edge-select">
 						<option value="">Выберите варинат</option>
 						<option value="ab">AB</option>
 						<option value="aib">A'A</option>
@@ -419,100 +427,100 @@
 						<option value="c1c">C1C</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q6_2-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
 
-			<div class="failed" id="question6.2-Help">
+			<div class="failed" id="question6_2-Help">
 				<p> Подумай! </p>
 			</div>
 
-			<div class="success" id="question6.2-Success">
+			<div class="success" id="question6_2-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube6.2.png" width="500" height="360">
 			</div>
 
 		</div>
 
-		<div id="question7.2">
+		<div id="question7_2">
 
 			<div>
-				<h2>Задание 7 (3. -BC-).</h2>
+				<h2>Задание 7 (В 3-м задании выбран ответ BC)</h2>
 				<p>
 					Соединим полученные точки:
 
-					<select id="q7.2-edge-select-1">
+					<select id="q7_2-edge-select-1">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">B</option>
-						<option value="aib">C</option>
-						<option value="bc">C1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X2</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+						<option value="a1">A1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x1">X1</option>
 					</select>
 
 					 и
 
-					<select id="q7.2-edge-select-2">
+					<select id="q7_2-edge-select-2">
 						<option value="">Выберите варинат:</option>
-						<option value="ab">B</option>
-						<option value="aib">C</option>
-						<option value="bc">C1</option>
-						<option value="c1c">B1</option>
-						<option value="ab">M</option>
-						<option value="aib">L</option>
-						<option value="bc">K</option>
-						<option value="c1c">X2</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+						<option value="a1">A1</option>
+						<option value="b1">B1</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+						<option value="k">K</option>
+						<option value="x1">X1</option>
 					</select>
 
-					<input type="submit" value="ОК">
+					<input id="q7_2-btn" type="submit" value="ОК">
 				</p>
 			</div>
 
-			<div class="failed" id="question7.2-Help">
+			<div class="failed" id="question7_2-Help">
 				<p> Нам нужны точки, лежащие в одной плоскости! </p>
 			</div>
 
-			<div class="success" id="question7.2-Success">
+			<div class="success" id="question7_2-Success">
 				<p> Правильно! </p>
 				<img src="assets/pictures/cube7.2.png" width="500" height="360">
 			</div>
 
 		</div>
 
-		<div id="question8.2">
+		<div id="question8_2">
 
 			<p>
-				<h2>Задание 8 (3. -BC-).</h2>
+				<h2>Задание 8 (В 3-м задании выбран ответ BC)</h2>
 				<p>Соединяем полученные точки, лежащие на одной грани:</p>
 
 				<p>
 					<div>
-						<input type="radio" id="8.2-PD" name="question8.2RadioGroup">
-						<label for="8.2-PD">P и D</label>
+						<input type="radio" id="8_2-PD" name="question8_2RadioGroup" value="N и L">
+						<label for="8_2-PD">N и L</label>
 					</div>
 
 					<div>
-						<input type="radio" id="8.2-CX2" name="question8.2RadioGroup">
-						<label for="8.2-CX2">С и X2</label>
+						<input type="radio" id="8_2-CX2" name="question8_2RadioGroup" value="L и M">
+						<label for="8_2-CX2">L и M</label>
 					</div>
 
 					<div>
-						<input type="radio" id="8.2-PK" name="question8.2RadioGroup">
-						<label for="8.2-PK">P и K</label>
+						<input type="radio" id="8_2-PK" name="question8_2RadioGroup" value="L и P">
+						<label for="8_2-PK">L и P</label>
 					</div>
 
-					<input type="submit" value="ОК">
+					<input id="q8_2-btn" type="submit" value="ОК">
 				</p>
 
 			</div>
 
 		</div>
 
-		<div id="result">
+		<div class="result" id="result">
 			<div class="failed" id="result-Help">
 				<p> Ой! </p>
 			</div>

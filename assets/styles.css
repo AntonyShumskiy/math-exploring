@@ -5,3 +5,7 @@
 .success {
     border: 5px solid darkseagreen;
 }
+
+.result {
+    border: 1px solid goldenrod;
+}
